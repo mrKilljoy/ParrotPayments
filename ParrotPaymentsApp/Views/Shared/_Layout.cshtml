@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="AuthModule">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon"type="image/x-icon" href="~/favicon.ico" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" data-ng-controller="AuthController">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                @Html.ActionLink("Parrot Payments", "Main", "Main", new { }, new { @class = "navbar-brand" })
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-left navbar-nav">
+                    <li>
+                        <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-ng-if="gotPublicName()">
+                        <div class="col-md-8">
+                            <p data-ng-model="userPublicName" class="navbar-username">Вы вошли как: {{userPublicName}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p data-ng-model="userBalance" class="navbar-username">Баланс: {{userBalance}}</p>
+                        </div>
+                    </li>
+
+                    <li data-ng-hide="isAuthenticated()">@Html.ActionLink("Войти", "Login", "Main", new { }, new { @class = "" })</li>
+                    <li data-ng-hide="isAuthenticated()">@Html.ActionLink("Регистрация", "Register", "Main", new { }, new { @class = "" })</li>
+                    <li data-ng-show="isAuthenticated()"><a class="btn" data-ng-click="logout()">Выйти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer-main">
+            <p>Parrot Payments &copy; 1986</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/alertify")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/ngBackbone")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

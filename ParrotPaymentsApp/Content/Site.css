@@ -1,0 +1,144 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+footer{
+    max-height:40px;
+    padding:0 40px;
+    text-align:right;
+}
+
+footer > span[class^="glyphicon"]{
+    font-size:3em;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* navbar */
+.header-panel{
+    background-color:limegreen;
+}
+
+.header-panel a{
+    color:white !important;
+    
+}
+
+.header-panel a:hover{
+    text-shadow:1px 1px 1px #ffd800;
+}
+
+.splash-panel{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:50px;
+}
+
+.splash-panel > img{
+    margin-right:100px;
+}
+
+i.fa.fa-cog{
+    margin-top:4px;
+    display:inline-block;
+    display:none;
+}
+
+.navbar-username{
+    margin-top:1.15em;
+}
+
+/* operations panel */
+.operation-choice-panel{
+    display:block;
+    margin:0 auto;
+    width:50%;
+    height:auto;
+}
+
+.operation-choice-panel p>a{
+    font-family:'Segoe UI';
+}
+
+.operation-btn-back{
+    text-align:center;
+}
+
+.row-proposal{
+    text-align:center;
+    font-size:1.9em;
+    padding-bottom:20px;
+}
+
+.row-operations{
+    text-align:center;
+}
+
+/* payment view */
+.operation-payment-container{
+    margin:30px auto 0 auto;
+    width:50%;
+}
+
+.operation-payment-container .panel-body .row{
+    margin-left:20px;
+    margin-bottom:15px;
+}
+
+.operation-payment-container .panel-body .row .input-group {
+    margin-bottom:15px;
+}
+
+/* history view */
+.operation-history-container{
+    margin:30px auto 0 auto;
+    width:70%;
+}
+
+.operation-history-container .panel-body .row{
+    margin-left:20px;
+    margin-bottom:15px;
+}
+
+.operation-history-container .panel-body .row .input-group {
+    margin-bottom:15px;
+}
+
+.payment-history-type-block{
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    padding: 2px;
+    text-align: center;
+}
+
+.payment-history-type-block > .btn.toggle{
+    margin-left: 5px;
+}
+
+/* history table header*/
+.table-list-search > thead{
+    background-color: #e8e8e8;
+}
+
+/* footers*/
+.footer-main{
+    text-align:right;
+}
+
+.footer-login{
+    text-align:center;
+}

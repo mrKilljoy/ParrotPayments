@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="AuthModule">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                @Html.ActionLink("Parrot Payments", "Main", "Main", new { }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer-login">
+            @*<p>ParrotPayments &copy; 1986</p>*@
+            @*<a id="update" href="#"><span class="glyphicon glyphicon-refresh icon-refresh"></span></i></a>*@
+            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw spinner-login" style="display:none;"></i>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/alertify")
+    @Scripts.Render("~/bundles/custom")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/ngBackbone")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿
+<form>
+    <div class="operation-payment-container" data-ng-controller="PaymentsController">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Новый перевод</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">Получатель</span>
+                            <input type="email" class="form-control input-lg" placeholder="Логин пользователя" data-ng-model="paymentReceiverLogin" value="{{paymentReceiverLogin}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">Сумма перевода</span>
+                            <input type="number" class="form-control input-lg" placeholder="" data-ng-model="paymentAmount" value="{{paymentAmount}}" data-ng-pattern="^([\d]){1,9}$" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6 col-md-offset-4">
+                            <input type="submit" value="Выполнить" class="btn btn-success btn-lg" data-ng-click="send()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--back to operations-->
+<div class="row operation-btn-back">
+    <a href="#!/operations" class="btn btn-info btn-lg">Назад</a>
+</div>

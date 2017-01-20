@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <div class="col-lg-12 splash-panel">
+        <img src="../../Content/pics/pr1_c.png" alt="Parrot picture" height="350" />
+    </div>
+</div>
+
+<div data-ng-controller="indexController" class="operation-choice-panel">
+    <div class="row row-proposal" data-ng-show="isAuthenticated()">
+        <p>Управляйте своим счетом</p>
+    </div>
+
+    <div class="row row-operations" data-ng-show="isAuthenticated()">
+        <div class="col-md-offset-1 col-md-4">
+            <p><a href="#!/payment" class="btn btn-success">Выполнить перевод</a></p>
+        </div>
+        <div class="col-md-offset-2 col-md-4">
+            <p><a href="#!/history" class="btn btn-success">Просмотр истории платежей</a></p>
+        </div>
+    </div>
+
+    <div class="row row-proposal" data-ng-hide="isAuthenticated()">
+        <p>Подключайся к системе Parrot Payments.</p>
+        <p>Начни сейчас и получи бонус в размере 500Р!</p>
+    </div>
+    <div class="row row-operations" data-ng-hide="isAuthenticated()">
+        <!--<p>@Html.ActionLink("Try it and get a bonus!", "Login", "Main", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-info btn-lg" })</p>-->
+        <p><a id="loginLink" class="btn btn-info btn-lg" href="/Register">Попробовать бесплатно</a></p>
+    </div>
+</div>

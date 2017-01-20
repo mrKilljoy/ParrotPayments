@@ -1,0 +1,53 @@
+﻿@*@using ParrotPaymentsMVC.Models
+@model LoginViewModel*@
+@{
+    ViewBag.Title = "Parrot Payments | Вход";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<h2>Вход в систему</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            <form class="form-horizontal" data-ng-controller="AuthController">
+
+                @Html.AntiForgeryToken()
+
+                <h4>Используйте данные Вашей учетной записи для входа.</h4>
+                <hr />
+                <div class="form-group">
+                    <label class="col-md-2 control-label">E-mail</label>
+                    <div class="col-md-10">
+                        <input type="email" class="form-control" data-ng-model="userLoginEmail" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Пароль</label>
+                    <div class="col-md-10">
+                        <input type="password" class="form-control" data-ng-model="userLoginPassword" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Вход" class="btn btn-default" data-ng-click="login()" />
+                    </div>
+                </div>
+                <p>
+                    @Html.ActionLink("Нет учетной записи?", "Register")
+                </p>
+                
+            </form>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            @*@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })*@
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

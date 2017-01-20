@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Parrot Payments | Регистрация";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<h2>Регистрация учетной записи</h2>
+
+<form data-ng-controller="AuthController" class="form-horizontal">
+    @Html.AntiForgeryToken()
+    <h4>Создайте новую учетную запись.</h4>
+    <hr />
+    <div class="form-group">
+        <label class="col-md-2 control-label">E-mail</label>
+        <div class="col-md-10">
+            <input type="email" class="form-control" data-ng-model="userRegistrationEmail" required />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Пароль</label>
+        <div class="col-md-10">
+            <input type="password" class="form-control" data-ng-model="userRegistrationPassword" required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Подтвердите пароль</label>
+        <div class="col-md-10">
+            <input type="password" class="form-control" data-ng-model="userRegistrationConfirmPassword" required />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Ваше имя</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" data-ng-model="userRegistrationName" required />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Регистрация" data-ng-click="registerUser()" />
+        </div>
+        <p>
+            @Html.ActionLink("Уже есть учетная запись?", "Login")
+        </p>
+    </div>
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
