@@ -69,3 +69,4 @@ C:\Users\123\Documents\Visual Studio 2015\Projects\ParrotPayments\ParrotPayments
 C:\Users\123\Documents\Visual Studio 2015\Projects\ParrotPayments\ParrotPaymentsApp\bin\System.Web.WebPages.xml
 C:\Users\123\Documents\Visual Studio 2015\Projects\ParrotPayments\ParrotPaymentsApp\bin\System.Web.WebPages.Deployment.xml
 C:\Users\123\Documents\Visual Studio 2015\Projects\ParrotPayments\ParrotPaymentsApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\123\Documents\Visual Studio 2015\Projects\ParrotPayments\ParrotPaymentsApp\obj\Debug\ParrotPaymentsApp.csprojResolveAssemblyReference.cache
